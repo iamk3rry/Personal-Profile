@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=""UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-devie-width, initial-scale=1.0">
+    <title>Kerry Cao</title>
+    <link rel="stylesheet" href="Website1Style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo3.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <h1>Hello, I'm Kerry Cao</h1>
+            <h6>Mechanical Engineering and Computer Science<br>Student at the University of Western Australia</h6>
+        </div>
+    </div>
+</div>
+<!-----------about----------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/about_pfp5.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <br>
+                <p>I am a first-year university student studying the Combined Bachelor of Engineering (Honours) and Bachelor of Science at the University of Western Australia, majoring in Mechanical Engineering and Computer Science.<br><br>My strengths include effective leadership, clear communication, and dynamic problem-solving skills. My diverse range of passions, ranging from engineering and technology to service and volunteering, has allowed me to gain transformative experiences and insights, broadening my skillset and vision. With a positive mindset and an eagerness to learn, I am confident in my ability to adapt, contribute, and make a valuable impact in any professional setting.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <div class="tab-contents-col">
+                        <h class="tab-contents-heading">Technical Skills</h>
+                        <p class="tab-contents-p">HTML<br>CSS<br>JavaScript<br>Python<br>Microsoft Small Basic</p>
+                    </div>
+                    <div class="tab-contents-col">
+                        <h class="tab-contents-heading">Soft Skills</h>
+                        <p class="tab-contents-p">Leadership<br>Teamwork<br>Communication<br>Problem-Solving<br>Resilience</p>
+                    </div>
+                    <div class="tab-contents-col">
+                        <h class="tab-contents-heading">Languages</h>
+                        <p class="tab-contents-p">English (Proficient)<br>Mandarin Chinese (Proficient)<br>French (Elementary)</p>
+                    </div>
+                    <!---<p class="tab-contents-column"><span>Technical Skills</span><br>HTML<br>CSS<br>JavaScript<br>Python<br>Microsoft Small Basic</p>
+                    <p class="tab-contents-column"><span>Soft Skills</span><br>Leadership<br>Communication<br>Teamwork<br>Problem-Solving</p>
+                    <p class="tab-contents-column"><span>Languages</span><br>English (Proficient)<br>Mandarin Chinese (Proficient)<br>French (Elementary)</p>--->
+                </div>
+
+                <div class="tab-contents" id="experience">
+                    <div class="tab-contents-col">
+                        <h class="tab-contents-heading">Feb 2025 - Present</h>
+                        <p class="tab-contents-p">Academic Tutor at Auskey Education<br>(Part-Time)</p>
+                    </div>
+                    <div class="tab-contents-col">
+                        <h class="tab-contents-heading">Feb 2025 - Jun 2025</h>
+                        <p class="tab-contents-p">Private Tutor and Student Mentor at KIS Academics<br>(Part-Time)</p>
+                    </div>
+                    <div class="tab-contents-col">
+                        <h class="tab-contents-heading">Sep 2021 - Sep 2024</h>
+                        <p class="tab-contents-p">Tech Coach at All Saints' College<br>(Part-Time)</p>
+                    </div>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <div class="tab-contents-col">
+                        <h class="tab-contents-heading">2025 - Present</h>
+                        <p class="tab-contents-p">Combined Bachelor of Mechanical Engineering (Honours) and Bachelor of Computer Science at the University of Western Australia</p>
+                    </div>
+                    <div class="tab-contents-col">
+                        <h class="tab-contents-heading">2011 - 2024</h>
+                        <p class="tab-contents-p">Western Australian Certificate of Education at All Saints' College</p>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
